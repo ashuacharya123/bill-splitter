@@ -1,5 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700&display=swap");
 
+@mixin logo($url) {
+  background-image: $url;
+  background-repeat: no-repeat;
+  background-position: 1.5rem, 2rem;
+}
+
+@mixin btn {
+  width: 100%;
+  background-color: $Very-dark-cyan;
+  color: $White;
+  height: 4.5rem;
+  font-family: inherit;
+  font-size: 2.2rem;
+  font-weight: $bold;
+  border-radius: 0.5rem;
+  border: none;
+}
+
 // ## Colors
 
 // ### Primary
@@ -10,7 +28,7 @@ $Strong-cyan: hsl(172, 67%, 45%);
 
 $Very-dark-cyan: hsl(183, 100%, 15%);
 $Dark-grayish-cyan: hsl(186, 14%, 43%);
-$Dark-grayish-cyan: hsl(184, 14%, 56%);
+$Dark-grayish-cyan-2: hsl(184, 14%, 56%);
 $Light-grayish-cyan: hsl(185, 41%, 84%);
 $Light-grayish-cyan-2: hsl(189, 41%, 97%);
 $White: hsl(0, 0%, 100%);
@@ -29,14 +47,176 @@ $bold: 700;
 
 html {
   font-size: 62.5%;
-  font-family: "Space Mono", monospace;
 }
 
 body {
   background-color: $Light-grayish-cyan;
+  font-family: "Space Mono", monospace;
 }
 
 .container {
   height: auto;
   width: 100%;
+  margin-top: 5rem;
+}
+
+.content {
+  min-height: 100vh;
+  width: 100%;
+
+  text-align: center;
+}
+
+.app {
+  margin-top: 3rem;
+  width: 100%;
+  min-height: 100vh;
+  background-color: $White;
+  border-radius: 2.5rem;
+  text-align: start;
+
+  &__upper {
+    width: 82%;
+    margin: 0 auto;
+    color: $Dark-grayish-cyan;
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    padding-top: 2em;
+
+    &__error {
+      padding: 0;
+      display: none;
+    }
+  }
+
+  &__input {
+    font-family: inherit;
+    background-color: $Light-grayish-cyan-2;
+    text-align: right;
+    width: 100%;
+    height: 4.5rem;
+    margin-top: 0.5rem;
+    font-size: 2.4rem;
+    font-weight: $bold;
+    color: $Very-dark-cyan;
+    padding-right: 1.5rem;
+    outline: none;
+    border: 2px solid transparent;
+    appearance: textfield;
+    border-radius: 0.5rem;
+
+    &:nth-of-type(1) {
+      @include logo(url(./images/icon-dollar.svg));
+    }
+
+    &:nth-of-type(2) {
+      @include logo(url(./images/icon-person.svg));
+    }
+
+    &:focus-visible {
+      border-color: #26c0ab;
+    }
+
+    &::placeholder {
+      opacity: 0.5;
+      color: $Dark-grayish-cyan;
+      font-size: 2.4rem;
+      text-align: right;
+      font-weight: $bold;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
+    margin-top: 1.5rem;
+
+    .btn {
+      @include btn;
+
+      &__input {
+        font-family: inherit;
+        background-color: $Light-grayish-cyan-2;
+        color: $Very-dark-cyan;
+        padding-right: 1.5rem;
+        text-align: right;
+        outline: none;
+        border: 2px solid transparent;
+
+        &:focus-visible {
+          border-color: #26c0ab;
+        }
+
+        &::placeholder {
+          opacity: 0.8;
+          color: $Very-dark-cyan;
+          text-align: end;
+          font-weight: $bold;
+        }
+      }
+    }
+  }
+
+  &__lower {
+    background-color: $Very-dark-cyan;
+    color: $White;
+    width: 88%;
+    margin: 3rem auto;
+    border-radius: 1.5rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1.4fr;
+    grid-template-columns: 1fr 1fr;
+
+    & > * {
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    &__heading {
+      display: grid;
+      margin-left: 2rem;
+      span {
+        font-size: 1.2rem;
+        color: $Dark-grayish-cyan;
+      }
+    }
+
+    &__dollar {
+      text-align: end;
+      margin-right: 2rem;
+      margin-top: 1.5rem;
+      align-self: center;
+      justify-self: center;
+      color: $Strong-cyan;
+      font-size: 3rem;
+      font-weight: $bold;
+    }
+
+    button {
+      grid-area: 3/1/4/3;
+      background-color: $Strong-cyan;
+      border: none;
+      border-radius: 0.5rem;
+      color: #01454d;
+      font-size: 1.8rem;
+      font-weight: $bold;
+      height: 50%;
+      margin-top: 3rem;
+    }
+  }
+}
+
+#btn-change {
+  background-color: $Strong-cyan;
+  color: #01454d;
+  font-weight: $bold;
+}
+
+#error {
+  display: inline-block;
+  color: red;
 }
