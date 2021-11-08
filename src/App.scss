@@ -115,7 +115,8 @@ body {
       @include logo(url(./images/icon-person.svg));
     }
 
-    &:focus-visible {
+    &:focus-visible,
+    &:hover {
       border-color: #26c0ab;
     }
 
@@ -206,8 +207,17 @@ body {
       font-weight: $bold;
       height: 50%;
       margin-top: 3rem;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: lighten($Strong-cyan, 15%);
+      }
     }
   }
+}
+
+#border-red {
+  border-color: red;
 }
 
 #btn-change {
@@ -219,4 +229,133 @@ body {
 #error {
   display: inline-block;
   color: red;
+}
+
+// ****************************************************************
+
+// Media Queries
+
+// *******************************************************************
+
+@media screen and (min-width: 500px) {
+  html {
+    font-size: 65%;
+  }
+  .app {
+    margin: 3rem auto;
+    width: 80%;
+  }
+}
+
+// *******************************************************************
+
+@media screen and (min-width: 770px) {
+  .container {
+    margin: 0;
+    height: 100vh;
+  }
+
+  .content {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    place-content: center;
+  }
+
+  .app {
+    display: flex;
+    width: 65%;
+    min-height: fit-content;
+
+    &__upper {
+      flex: 50%;
+      margin: 2rem 2rem 4rem 4rem;
+    }
+
+    &__lower {
+      flex: 50%;
+      margin: 4rem 4rem 3rem 2rem;
+
+      &__heading {
+        place-self: start;
+
+        margin-left: 4rem;
+        &:nth-of-type(1) {
+          place-self: center;
+        }
+      }
+
+      &__dollar {
+        margin-right: 2rem;
+        margin-left: -2rem;
+        margin-top: 2rem;
+        font-size: 4rem;
+
+        &:nth-of-type(2) {
+          margin-top: -1.5rem;
+        }
+      }
+    }
+
+    &__grid {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    button {
+      height: 35%;
+      place-self: center;
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (min-width: 770px) and (max-width: 1115px) {
+  html {
+    font-size: 55%;
+  }
+
+  .app {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1115px) and (max-width: 1170px) {
+  .app {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1170px) and (max-width: 1260px) {
+  .app {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  html {
+    font-size: 100%;
+  }
+
+  .content__logo {
+    transform: scale(1.5);
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  html {
+    font-size: 150%;
+  }
+  .content__logo {
+    transform: scale(2);
+  }
+}
+
+@media screen and (min-width: 3500px) {
+  html {
+    font-size: 200%;
+  }
+  .content__logo {
+    transform: scale(2.5);
+  }
 }

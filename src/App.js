@@ -59,6 +59,7 @@ function App() {
               Can't be zero
             </h3>
             <input
+              id={err === 1 || err === 12 || err === 21 ? "border-red" : ""}
               className="app__input"
               type="number"
               placeholder="0"
@@ -139,6 +140,7 @@ function App() {
               value={people}
               onClick={(e) => setErr(0)}
               onChange={(e) => setPeople(e.target.value)}
+              id={err === 2 || err === 12 || err === 21 ? "border-red" : ""}
             />
           </div>
 

@@ -85,7 +85,7 @@ body {
   background-position: 1.5rem, 2rem;
 }
 
-.app__input:focus-visible {
+.app__input:focus-visible, .app__input:hover {
   border-color: #26c0ab;
 }
 
@@ -244,6 +244,16 @@ body {
   font-weight: 700;
   height: 50%;
   margin-top: 3rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.app__lower button:hover {
+  background-color: #55ddcb;
+}
+
+#border-red {
+  border-color: red;
 }
 
 #btn-change {
@@ -255,5 +265,128 @@ body {
 #error {
   display: inline-block;
   color: red;
+}
+
+@media screen and (min-width: 500px) {
+  html {
+    font-size: 65%;
+  }
+  .app {
+    margin: 3rem auto;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .container {
+    margin: 0;
+    height: 100vh;
+  }
+  .content {
+    height: 100vh;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    place-content: center;
+  }
+  .app {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 65%;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+  .app__upper {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    margin: 2rem 2rem 4rem 4rem;
+  }
+  .app__lower {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    margin: 4rem 4rem 3rem 2rem;
+  }
+  .app__lower__heading {
+    place-self: start;
+    margin-left: 4rem;
+  }
+  .app__lower__heading:nth-of-type(1) {
+    place-self: center;
+  }
+  .app__lower__dollar {
+    margin-right: 2rem;
+    margin-left: -2rem;
+    margin-top: 2rem;
+    font-size: 4rem;
+  }
+  .app__lower__dollar:nth-of-type(2) {
+    margin-top: -1.5rem;
+  }
+  .app__grid {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  .app button {
+    height: 35%;
+    place-self: center;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 770px) and (max-width: 1115px) {
+  html {
+    font-size: 55%;
+  }
+  .app {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1115px) and (max-width: 1170px) {
+  .app {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1170px) and (max-width: 1260px) {
+  .app {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  html {
+    font-size: 100%;
+  }
+  .content__logo {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  html {
+    font-size: 150%;
+  }
+  .content__logo {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+@media screen and (min-width: 3500px) {
+  html {
+    font-size: 200%;
+  }
+  .content__logo {
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+  }
 }
 /*# sourceMappingURL=App.css.map */
