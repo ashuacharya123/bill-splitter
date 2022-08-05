@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/frontend-mentor-15/static/css/main.7a22e0aa.chunk.css",
-    "main.js": "/frontend-mentor-15/static/js/main.3851f5a9.chunk.js",
-    "main.js.map": "/frontend-mentor-15/static/js/main.3851f5a9.chunk.js.map",
-    "runtime-main.js": "/frontend-mentor-15/static/js/runtime-main.351d3146.js",
-    "runtime-main.js.map": "/frontend-mentor-15/static/js/runtime-main.351d3146.js.map",
-    "static/js/2.8cbd778b.chunk.js": "/frontend-mentor-15/static/js/2.8cbd778b.chunk.js",
-    "static/js/2.8cbd778b.chunk.js.map": "/frontend-mentor-15/static/js/2.8cbd778b.chunk.js.map",
-    "static/js/3.59151402.chunk.js": "/frontend-mentor-15/static/js/3.59151402.chunk.js",
-    "static/js/3.59151402.chunk.js.map": "/frontend-mentor-15/static/js/3.59151402.chunk.js.map",
-    "index.html": "/frontend-mentor-15/index.html",
-    "static/css/main.7a22e0aa.chunk.css.map": "/frontend-mentor-15/static/css/main.7a22e0aa.chunk.css.map",
-    "static/js/2.8cbd778b.chunk.js.LICENSE.txt": "/frontend-mentor-15/static/js/2.8cbd778b.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/frontend-mentor-15/static/media/icon-person.65bfd204.svg",
-    "static/media/logo.3cc0528b.svg": "/frontend-mentor-15/static/media/logo.3cc0528b.svg"
+    "main.css": "/bill-splitter/static/css/main.305b6179.chunk.css",
+    "main.js": "/bill-splitter/static/js/main.b1d29eaa.chunk.js",
+    "main.js.map": "/bill-splitter/static/js/main.b1d29eaa.chunk.js.map",
+    "runtime-main.js": "/bill-splitter/static/js/runtime-main.16bbbd73.js",
+    "runtime-main.js.map": "/bill-splitter/static/js/runtime-main.16bbbd73.js.map",
+    "static/js/2.8cbd778b.chunk.js": "/bill-splitter/static/js/2.8cbd778b.chunk.js",
+    "static/js/2.8cbd778b.chunk.js.map": "/bill-splitter/static/js/2.8cbd778b.chunk.js.map",
+    "static/js/3.59151402.chunk.js": "/bill-splitter/static/js/3.59151402.chunk.js",
+    "static/js/3.59151402.chunk.js.map": "/bill-splitter/static/js/3.59151402.chunk.js.map",
+    "index.html": "/bill-splitter/index.html",
+    "static/css/main.305b6179.chunk.css.map": "/bill-splitter/static/css/main.305b6179.chunk.css.map",
+    "static/js/2.8cbd778b.chunk.js.LICENSE.txt": "/bill-splitter/static/js/2.8cbd778b.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/bill-splitter/static/media/icon-person.65bfd204.svg",
+    "static/media/logo.3cc0528b.svg": "/bill-splitter/static/media/logo.3cc0528b.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.351d3146.js",
+    "static/js/runtime-main.16bbbd73.js",
     "static/js/2.8cbd778b.chunk.js",
-    "static/css/main.7a22e0aa.chunk.css",
-    "static/js/main.3851f5a9.chunk.js"
+    "static/css/main.305b6179.chunk.css",
+    "static/js/main.b1d29eaa.chunk.js"
   ]
 }
